@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calmix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main page -->
+    <header>
+        <a href="#" class="logo">Calmix</a>
+        <label class="videoLabel">
+            Select background
+            <select name="videoSelector" id="selectVideo">
+                <option value="ocean" selected>Ocean</option>
+                <option value="waterfall">Waterfall</option>
+                <option value="volcano">Volcano</option>
+                <option value="stars">Stars</option>
+                <option value="river">River</option>
+                <option value="mountain">Mountain</option>
+                <option value="sunset">Sunset</option>
+            </select>
+        </label>
+        <div class="right-side">
+            <div class="btns day-night">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <video id="bgVideo" src="./assets/pexels-esteban-arango-9470639.mp4" autoplay loop muted type="mp4"></video>
+        <img class="mask" src="./assets/mask.jpg" alt="mask">
+        <h2 id="title">Ocean</h2>
+        <p class="copyright">From Gabriel with ❤</p>
+        <ul class="social">
+            <li>
+                <a href="https://www.facebook.com/andreigabriel.negreanumaior/" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://medium.com/@1532239558973" target="_blank">
+                    <ion-icon name="logo-medium"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/gabinegreanu.01/" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/agnm01" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sidebar navigation -->
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Package</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+    <script>
+        const lookUpOptions = {
+            "ocean": {
+                fileUrl: "./assets/video.mp4",
+                caption: "Ocean"
+            },
+            "waterfall": {
+                fileUrl: "./assets/video1.mp4",
+                caption: "Waterfall"
+            },
+            "volcano": {
+                fileUrl: "./assets/video2.mp4",
+                caption: "Volcano"
+            },
+            "stars": {
+                fileUrl: "./assets/video3.mp4",
+                caption: "Stars"
+            },
+            "river": {
+                fileUrl: "./assets/video4.mp4",
+                caption: "River"
+            },
+            "mountain": {
+                fileUrl: "./assets/video5.mp4",
+                caption: "Mountain"
+            },
+            "sunset": {
+                fileUrl: "./assets/video6.mp4",
+                caption: "Sunset"
+            }
+        };
+
+        let dayNight = document.querySelector('.day-night');
+        let menuToggle = document.querySelector('.menu-toggle');
+        let body = document.querySelector('body');
+        let nav = document.querySelector('.nav');
+
+        dayNight.onclick = function() {
+            body.classList.toggle('dark');
+            dayNight.classList.toggle('active');
+        }
+
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+
+        function changeVideo() {
+            let selectedVideo = lookUpOptions[document.getElementById("selectVideo").value];
+            document.getElementById("bgVideo").setAttribute('src', selectedVideo.fileUrl);
+            document.getElementById("title").innerHTML = selectedVideo.caption;
+        }
+
+        changeVideo();
+
+        document.getElementById("selectVideo").addEventListener("change", changeVideo);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+</html>
