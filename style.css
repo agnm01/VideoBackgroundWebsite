@@ -42,6 +42,13 @@ header .videoLabel {
     color: var(--black);
 }
 
+#selectVideo {
+    position: relative;
+    display: flex;
+    width: 150px;
+    top: 10px;
+}
+
 header .right-side {
     display: flex;
 }
