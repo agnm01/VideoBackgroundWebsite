@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ///// GENERAL STYLING RULES ////// */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +19,13 @@
     --black: #fff;
     --white: #333;
 }
+
+body {
+    background: var(--white);
+}
+
+
+/* ///// HOME STYLING ///// */
 
 header {
     position: absolute;
@@ -210,6 +220,42 @@ header .right-side {
     color: var(--black);
     font-size: 1.75em;
 }
+
+
+/* ///// ABOUT SYLING ///// */
+
+.content {
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    padding: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.4px;
+}
+
+.content .content-title {
+    position: relative;
+    z-index: 3;
+    font-size: 3vw;
+    color: var(--black);
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content a {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+
+/* ///// MEDIA QUERIES ///// */
 
 @media (max-width: 768px) {
     header {
