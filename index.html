@@ -12,7 +12,7 @@
 <body>
     <!-- Main page -->
     <header>
-        <a href="#" class="logo">Calmix</a>
+        <a href="#home" class="logo">Calmix</a>
         <label class="videoLabel">
             Select background
             <select name="videoSelector" id="selectVideo">
@@ -37,11 +37,45 @@
         </div>
     </header>
 
-    <section class="main" id="">
+    <section class="main" id="home">
         <video id="bgVideo" src="./assets/pexels-esteban-arango-9470639.mp4" autoplay loop muted type="mp4"></video>
         <img class="mask" src="./assets/mask.jpg" alt="mask">
         <h2 id="title">Ocean</h2>
-        <p class="copyright">From Gabriel with ❤</p>
+    </section>
+
+    <hr>
+
+    <section class="about" id="about">
+        <div class="content">
+            <h2 class="content-title">About</h2>
+            <p>Hello! It's so great to have you here. Let me tell you a bit about this app.</p> <br>
+            <p>This is <strong>Calmix</strong>. A web solution for people dealing with anxiety, depression or stress. The collection of calming videos on the Home page is intended to put the user in a state of relaxation and calmness. Soon, there will also
+                be a collection of sounds (fire
+                <ion-icon name="flame-outline"></ion-icon>, rain
+                <ion-icon name="rainy-outline"></ion-icon>, storm
+                <ion-icon name="flash-outline"></ion-icon>, forest
+                <ion-icon name="leaf-outline"></ion-icon>, blizzard
+                <ion-icon name="snow-outline"></ion-icon> etc.) which will further allow the user to maintain his/her calm and remain grounded.
+            </p> <br>
+            <p>Anxiety and depression are very real and should not be treated lightly. My drive in creating this app is to give a little help to anyone in need. There are people out there who don't have anyone to talk to. People struggling all on their own.
+                They might feel forgotten, invisible... I know how you're feeling. I was there too and sometimes, I still have fights to push through. Buuuuut, don't worry!
+            </p> <br>
+            <p><strong>We're here for you!</strong> You don't have to be afraid. Soon, Calmix will have a blog section where you can find the best articles, written by professionals, regarding your mental health, identifying the root of the problem and applying
+                solutions.
+            </p> <br>
+            <p>I'm also very excited to tell you about another feature I will power up in this app soon. Let's give a warm welcome to <strong>The Honeypot!</strong></p> <br>
+            <p>The Honeypot is a collection of books, fiction and non-fiction, available for download directly from the web app or from the mobile version(COMING SOON). These are approved by the general public and recognized by many as the top of the line
+                resources in achieving a stable mental health.
+            </p> <br>
+            <p>I'm honestly excited about this whole project and I hope you are as well. Give me a token of your appreciation in the <strong><a href="#">Support & Contact</a></strong> page and leave a feedback :)</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="package"></section>
+
+    <section class="footer">
         <ul class="social">
             <li>
                 <a href="https://www.facebook.com/andreigabriel.negreanumaior/" target="_blank">
@@ -68,9 +102,11 @@
 
     <!-- Sidebar navigation -->
     <ul class="nav">
-        <li><a href="index.html">Home</a></li>
         <li>
-            <a href="about.html">About</a>
+            <a href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
         </li>
         <li>
             <a href="#">Package</a>
