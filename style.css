@@ -20,6 +20,10 @@
     --white: #333;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--white);
 }
@@ -43,13 +47,6 @@ header {
     width: 100%;
     padding: 40px 100px;
     z-index: 10000;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
-section {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
 }
 
 header .logo {
@@ -262,8 +259,6 @@ header .right-side {
     text-align: justify;
     letter-spacing: 0.4px;
 }
-
-.content {}
 
 .content .content-title {
     position: relative;
